@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center mt-5">
+
+    <div class="col-lg-8">
+
+        <div class="card shadow-sm">
+
+            <div class="card-body text-center p-5">
+
+                <h1 class="display-4 fw-bold text-primary">
+                    <i class="bi bi-mortarboard-fill"></i>
+                    Student Manager
+                </h1>
+
+                <p class="lead mt-3">
+                    Une application Django simple permettant de gérer les étudiants
+                    d'un établissement.
+                </p>
+
+                <hr>
+
+                <p class="text-muted">
+                    Ce projet illustre les principales fonctionnalités de Django :
+                    authentification, gestion des étudiants et déploiement sur Render.
+                </p>
+
+                {% if user.is_authenticated %}
+
+                    <a href="{% url 'dashboard' %}" class="btn btn-primary btn-lg">
+                        <i class="bi bi-speedometer2"></i>
+                        Accéder au tableau de bord
+                    </a>
+
+                {% else %}
+
+                    <a href="{% url 'login' %}" class="btn btn-primary btn-lg">
+                        <i class="bi bi-box-arrow-in-right"></i>
+                        Se connecter
+                    </a>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4">Tableau de bord</h2>
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <div class="card text-bg-primary shadow-sm">
+
+            <div class="card-body">
+
+                <h5>Total des étudiants</h5>
+
+                <h1>{{ total_students }}</h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
