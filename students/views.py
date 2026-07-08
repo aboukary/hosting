@@ -12,7 +12,6 @@ def home(request):
     return render(request, "home.html")
 
 
-@login_required
 def dashboard(request):
 
     total_students = Student.objects.count()
