@@ -23,7 +23,7 @@ def dashboard(request):
     return render(request, "dashboard.html", context)
 
 
-class StudentListView(LoginRequiredMixin, ListView):
+class StudentListView(ListView):
 
     model = Student
 
@@ -34,7 +34,7 @@ class StudentListView(LoginRequiredMixin, ListView):
     ordering = ["last_name"]
 
 
-class StudentCreateView(LoginRequiredMixin, CreateView):
+class StudentCreateView(CreateView):
 
     model = Student
 
